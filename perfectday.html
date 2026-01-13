@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfect Day Database System Design</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .pdf-section {
+      margin-bottom: 60px;
+    }
+
+    .pdf-container {
+      width: 100%;
+      height: 600px;
+      border: 2px solid white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      margin-top: 15px;
+      text-align: center;
+      color: #ccc;
+    }
+
+    .project-overview {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+
+    .project-overview h2 {
+      color: #80d0ff;
+      margin-bottom: 15px;
+    }
+
+    .project-overview ul {
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    .back-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+    }
+
+    .back-button {
+      padding: 12px 24px;
+      border: 1px solid #80d0ff;
+      border-radius: 30px;
+      color: #80d0ff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #80d0ff;
+      color: black;
+      cursor: pointer;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 40px 0 20px 0;
+      color: #80d0ff;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Database System Design for Perfect Day</h1>
+
+  <div class="project-overview">
+    <h2>Project Overview</h2>
+    <p>
+      Developed a comprehensive database management system for Perfect Day, a Berkeley-based 
+      biotech startup that produces ProFerm™ - an animal-free whey protein used in dairy 
+      alternatives. The project involved designing a complete relational database architecture 
+      to streamline order tracking, demand forecasting, and production planning across their 
+      supply chain operations.
+    </p>
+    <h2>Key Achievements</h2>
+    <ul>
+      <li>Designed 20-table relational schema with complete EER diagram based on manufacturing and supply chain frameworks</li>
+      <li>Implemented normalization up to BCNF to eliminate data redundancy and ensure data integrity</li>
+      <li>Created SQL queries for aggregate production planning using Economic Production Quantity (EPQ) model</li>
+      <li>Developed forecasting accuracy analysis using MSE and RMSE metrics to optimize inventory management</li>
+      <li>Architected end-to-end order tracking system from forecast creation to warehouse fulfillment</li>
+    </ul>
+  </div>
+
+  <div class="pdf-section">
+    <div class="pdf-container">
+      <iframe src="https://drive.google.com/file/d/1Y2IA1EjrnTFD5sNmtrDG0Kc5v_nntuba/preview"></iframe>
+    </div>
+    
+    <p class="description">
+      Final presentation showcasing the EER diagram, relational schema, normalization process, 
+      and SQL queries for production planning and forecasting accuracy analysis.
+    </p>
+  </div>
+
+  <div class="back-container">
+    <a href="technical.html" class="back-button">← Back to Projects</a>
+  </div>
+</body>
+</html>
