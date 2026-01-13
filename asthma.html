@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Predicting Asthma ED Visit Rates</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .pdf-section {
+      margin-bottom: 60px;
+    }
+
+    .pdf-container {
+      width: 100%;
+      height: 600px;
+      border: 2px solid white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      margin-top: 15px;
+      text-align: center;
+      color: #ccc;
+    }
+
+    .file-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .file-link {
+      padding: 10px 20px;
+      border: 1px solid #80d0ff;
+      border-radius: 20px;
+      color: #80d0ff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .file-link:hover {
+      background-color: #80d0ff;
+      color: black;
+      cursor: pointer;
+    }
+
+    a.back {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: #4992d6;
+      text-decoration: underline;
+      font-size: 1rem;
+    }
+
+    a.back:hover {
+      color: white;
+    }
+
+    .back-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+    }
+
+    .back-button {
+      padding: 12px 24px;
+      border: 1px solid #80d0ff;
+      border-radius: 30px;
+      color: #80d0ff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #80d0ff;
+      color: black;
+      cursor: pointer;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 40px 0 20px 0;
+      color: #80d0ff;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Predicting Asthma ED Visit Rates From Environmental Factors</h1>
+
+  <div class="pdf-section">
+    <div class="pdf-container">
+      <iframe src="https://drive.google.com/file/d/1NH8go23ujBKG1tpE57ugWfTOmK-t5Uhh/preview"></iframe>
+    </div>
+    
+    <p class="description">
+      This is the final presentation summarizing our predictive models (Linear Regression, Random Forest, and Gradient Boosting) for forecasting asthma emergency department visit rates across California census tracts using environmental and socioeconomic data.
+    </p>
+  </div>
+
+  <h2 class="section-title">Project Resources</h2>
+  
+  <div class="file-links">
+    <a href="https://colab.research.google.com/drive/1OQ-MP_NeAyhEy70NrBK_xbWsb5gL6qpq" class="file-link" target="_blank">📓 View Jupyter Notebook</a>
+    <a href="https://docs.google.com/spreadsheets/d/1QtJ7nlNi6EU7r6pJElqlIV0jvtsT-yjicOGLhTOw_k4" class="file-link" target="_blank">📊 View Dataset (CSV)</a>
+  </div>
+
+  <p class="description">
+    Explore the complete analysis workflow, including data preprocessing, model training, and evaluation metrics. The dataset contains CalEnviroScreen 4.0 environmental and demographic features at the census tract level.
+  </p>
+
+  <div class="back-container">
+    <a href="technical.html" class="back-button">← Back to Projects</a>
+  </div>
+</body>
+</html>
