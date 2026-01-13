@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photography & Videography</title>
+  <link rel="stylesheet" href="technical.css" />
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Courier New', monospace;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: #ffffff;
+      margin: 60px auto 30px;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+    }
+
+        .photo-item {
+      position: relative;
+      width: 280px;
+      height: 210px; /* 4:3 aspect ratio (280 x 210) */
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid #555;
+      background-color: #000;
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .photo-item:hover img {
+    transform: scale(1.05);
+    }
+
+    .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 10px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    }
+
+    .photo-item:hover .overlay {
+    opacity: 1;
+    }
+
+
+    .video-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+    }
+
+    .video-box {
+    width: 100%;
+    max-width: 560px;
+    border: 2px solid #555;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #111;
+    padding-bottom: 15px;
+    }
+
+    .video-box iframe {
+    width: 100%;
+    height: 360px;
+    border: none;
+    }
+
+    .video-caption {
+    font-size: 0.95rem;
+    color: #ccc;
+    text-align: center;
+    font-style: italic;
+    margin-top: 15px;
+    padding: 0 20px;
+    line-height: 1.6;
+    }
+
+
+    .back-container {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .back-button {
+      padding: 12px 24px;
+      border: 1px solid #80d0ff;
+      border-radius: 30px;
+      color: #80d0ff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #80d0ff;
+      color: black;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Photography & Videography</h1>
+    <p>Moments captured through my lens — in stills and motion.</p>
+  </div>
+
+  <!-- PHOTO SECTION -->
+<div class="section-title">Photo Gallery</div>
+<div class="photo-grid">
+  <div class="photo-item">
+    <img src="pic1.jpg" alt="Photo 1" />
+    <div class="overlay">Abraeo Cafe, NYC</div>
+  </div>
+  <div class="photo-item">
+    <img src="pic2.jpg" alt="Photo 2" />
+    <div class="overlay">Brooklyn Bridge July 4th, NYC</div>
+  </div>
+  <div class="photo-item">
+    <img src="pic3.JPG" alt="Photo 3" />
+    <div class="overlay">L'industrie Pizza West Village, NYC</div>
+  </div>
+  <div class="photo-item">
+    <img src="pic4.JPG" alt="Photo 4" />
+    <div class="overlay">Shinzo Omakase LSE, NYC</div>
+  </div>
+  <!-- Add more as needed -->
+</div>
+
+
+  <!-- VIDEO SECTION -->
+  <div class="section-title">Video Journal</div>
+  <div class="video-container">
+    <div class="video-box">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sMrgbf80_20?si=UeD0I_6b6AfyCSN9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="video-caption">
+    Japan Vlog: Part 1 — A visual diary beginning from us packing in UC Berkeley to arrving in Tokyo for our first day!
+  </div>
+
+  <div class="video-container">
+    <div class="video-box">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/w5x85HicsYw?si=q_2j0_Dk2FhNMXaf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="video-caption">
+    Japan Vlog: Part 2 — A visual diary exploring the beauty of the shrines and lights!
+  </div>
+
+  <div class="video-container">
+    <div class="video-box">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/yQcHt6-r6uc?si=o0Pq_xkjyv62_neb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <div class="video-caption">
+    Japan Vlog: Part 3 — A visual diary venturing in shops, streets of Tokyo, and TeamLab Planets!
+  </div>
+
+
+  <!-- BACK BUTTON -->
+  <div class="back-container">
+    <a href="creator.html" class="back-button">← Back to Creative</a>
+  </div>
+
+</body>
+</html>

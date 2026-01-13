@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joy Zhang - Portfolio</title>
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    .about-section {
+      padding: 60px 20px;
+      background-color: #000000;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about-section img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      border: 3px solid white;
+    }
+
+    .about-section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .about-section p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      max-width: 700px;
+    }
+    .intro {
+      padding: 80px 20px;
+      text-align: center;
+      color: white;
+      line-height: 1.5;
+    }
+
+    .clickable {
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    #creator {
+    color: #407ba2; 
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 1.15em;
+    }
+
+    #data-lover {
+      color: #407ba2;
+      font-family: 'Courier New', monospace;
+    }
+
+    #creator:hover,
+    #data-lover:hover {
+      color: #80d0ff;
+    }
+
+
+    ul.top-nav {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 10px 20px;
+      background-color: #000000;
+      margin: 0;
+    }
+
+    ul.top-nav li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    ul.top-nav li a:hover {
+      color: #80d0ff;
+    }
+
+    .head {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .head h2 {
+      color: white;
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+      font-size: 2rem;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <ul class="top-nav">
+      <li><a href="https://www.linkedin.com/in/joyzhangxyz/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="https://drive.google.com/file/d/1RzbB6kWZLD6G4nf51fTEJABczkFcqLfY/view" target="_blank" rel="noopener noreferrer">Resume</a></li>
+      <li><a href="https://github.com/joyifcc" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+    <div class="head">
+      <h2>joyxyz.dev</h2>
+    </div>
+  </header>
+
+  <main>
+    <div class="intro">
+      <h1><span style="font-size: 60px;"><b>hi</b></span></h1>
+      <h2>my name is joy zhang</h2>
+      <h2>
+        a <span class="monospace-text clickable" id="creator">creator</span> and
+        <span class="light-text clickable" id="data-lover"><i>&lt;data lover/&gt;</i></span>
+      </h2>
+    </div>
+  </main>
+
+  <section class="about-section">
+    <img src="joypic.jpg" alt="Joy Zhang Photo" />
+    <h2>Nice to meet you — I'm Joy 👋</h2>
+    <p>
+      I'm a multidisciplinary builder and creative thinker based in the Bay Area, 
+      currently studying Data Science and Industrial Engineering at UC Berkeley. 
+      From leading engineering teams and launching sustainability initiatives to 
+      modeling NBA games and exploring neural networks, I thrive at the intersection 
+      of user insight, technical depth, creative design, and business strategy.
+      <br /><br />
+      I’m passionate about crafting meaningful, human-centered experiences— whether 
+      through intuitive design, systems thinking, or storytelling with data. 
+      Outside of class, you’ll find me DJing, editing travel vlogs from Japan, or 
+      dreaming up the next quirky side project.
+    </p>
+  </section>
+
+  <script>
+    document.getElementById("creator").addEventListener("click", function () {
+      window.location.href = "creator.html";
+    });
+    document.getElementById("data-lover").addEventListener("click", function () {
+      window.location.href = "technical.html";
+    });
+  </script>
+</body>
+</html>
