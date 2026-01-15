@@ -366,12 +366,13 @@ body {
     font-size: 2.5rem;  /* bigger "my name is joy" and other h2s */
   }
   
-  
-  ul.top-nav {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 10px 20px;
-    background-color: #000000;
-    margin: 0;
-  }
+ul.top-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
