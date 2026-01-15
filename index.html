@@ -6,7 +6,6 @@
   <title>Joy Zhang - Portfolio</title>
   <link rel="stylesheet" href="index.css" />
   <style>
-    /* Theme variables */
     :root {
       --bg-color: #000000;
       --text-color: #ffffff;
@@ -132,13 +131,27 @@
       color: var(--accent-hover);
     }
 
+    /* Fix for header and nav - remove box */
+    header {
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
     ul.top-nav {
       list-style: none;
       display: flex;
       gap: 20px;
       padding: 10px 20px;
-      background-color: var(--bg-color);
+      background-color: transparent !important;
       margin: 0;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    ul.top-nav li {
+      background-color: transparent !important;
+      border: none !important;
     }
 
     ul.top-nav li a {
@@ -146,6 +159,9 @@
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
     }
 
     ul.top-nav li a:hover {
@@ -155,6 +171,8 @@
     .head {
       text-align: center;
       margin-top: 20px;
+      background-color: transparent !important;
+      border: none !important;
     }
 
     .head h2 {
