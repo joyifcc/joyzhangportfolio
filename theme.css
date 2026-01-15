@@ -236,3 +236,64 @@ body {
 .scroll-item:nth-child(7) { animation-delay: 0.7s; }
 .scroll-item:nth-child(8) { animation-delay: 0.8s; }
 .scroll-item:nth-child(9) { animation-delay: 0.9s; }
+
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  padding: 80px 20px 60px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  color: #999;
+  margin-bottom: 30px;
+}
+
+[data-theme="light"] .contact-section p {
+  color: #666;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.contact-button {
+  padding: 12px 24px;
+  border: 2px solid var(--accent-hover);
+  border-radius: 30px;
+  color: var(--accent-hover);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.contact-button:hover {
+  background-color: var(--accent-hover);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(128, 208, 255, 0.3);
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 40px;
+}
+
+[data-theme="light"] .footer-text {
+  color: #999;
+}
