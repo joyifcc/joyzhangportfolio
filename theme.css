@@ -237,6 +237,28 @@ body {
 .scroll-item:nth-child(8) { animation-delay: 0.8s; }
 .scroll-item:nth-child(9) { animation-delay: 0.9s; }
 
+
+
+.contact-section {
+  text-align: center;
+  padding: 60px 20px 40px;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 100px;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(to right, var(--accent-color), var(--accent-hover));
+}
+
 /* Contact Section - Compact Version */
 .contact-section {
   text-align: center;
