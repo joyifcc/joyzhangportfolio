@@ -1,0 +1,157 @@
+/* theme.css */
+:root {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --accent-color: #407ba2;
+  --accent-hover: #80d0ff;
+  --border-color: #ffffff;
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #2c5f7f;
+  --accent-hover: #407ba2;
+  --border-color: #000000;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Theme toggle switch */
+.theme-toggle-wrapper {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.theme-toggle {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: var(--accent-color);
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 2px solid var(--border-color);
+}
+
+.theme-toggle:hover {
+  background-color: var(--accent-hover);
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.theme-toggle.light .toggle-slider {
+  transform: translateX(24px);
+}
+
+/* Apply to common elements */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+}
+
+.section-title {
+  color: var(--text-color) !important;
+}
+
+.section-description,
+.caption,
+.caption-description {
+  color: #999;
+}
+
+[data-theme="light"] .section-description,
+[data-theme="light"] .caption,
+[data-theme="light"] .caption-description {
+  color: #666;
+}
+
+/* Boxes and containers */
+.figma-box,
+.pdf-box,
+.expandable {
+  background-color: var(--bg-color);
+  border-color: var(--border-color);
+}
+
+/* Images */
+.gallery-item img,
+.scroll-item img,
+img {
+  border-color: var(--border-color);
+  transition: border-color 0.3s;
+}
+
+/* Buttons */
+.back-button,
+button,
+.cta button {
+  color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+.back-button:hover,
+button:hover,
+.cta button:hover {
+  background-color: var(--accent-hover);
+  color: var(--bg-color);
+}
+
+/* Header fixes */
+header {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+ul.top-nav {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+ul.top-nav li {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+ul.top-nav li a {
+  color: var(--text-color);
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: color 0.3s;
+}
+
+ul.top-nav li a:hover {
+  color: var(--accent-hover);
+}
+
+.head {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.head h2 {
+  color: var(--text-color);
+}

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <title>Client Consulting Projects</title>
+    <link rel="stylesheet" href="theme.css" />
     <style>
         body {
-            background-color: black;
-            color: white;
             font-family: 'Courier New', monospace;
             margin: 0;
             padding: 20px;
+            /* Colors now come from theme.css */
         }
 
         h1 {
@@ -23,14 +23,18 @@
             max-width: 700px;
             margin: 0 auto 40px auto;
             font-size: 1.1rem;
-            color: #ccc;
+            color: #999;
             line-height: 1.6;
+        }
+
+        [data-theme="light"] .header-description {
+            color: #666;
         }
 
         .section-title {
             text-align: center;
             font-size: 1.8rem;
-            color: #ffffff;
+            color: var(--text-color);
             margin: 60px auto 30px auto;
             position: relative;
             display: inline-block;
@@ -41,7 +45,7 @@
             display: block;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, #4992d6, #80d0ff);
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-hover));
             border-radius: 5px;
             margin-top: 10px;
         }
@@ -55,25 +59,31 @@
             font-size: 1.4rem;
             font-weight: bold;
             margin-bottom: 10px;
-            color: #80d0ff;
+            color: var(--accent-hover);
         }
 
         .project-description {
             font-size: 1rem;
-            color: #ccc;
+            color: #999;
             line-height: 1.6;
             margin-bottom: 20px;
+        }
+
+        [data-theme="light"] .project-description {
+            color: #666;
         }
 
         .pdf-container {
             width: 100%;
             height: 500px;
-            border: 2px solid white;
+            border: 2px solid var(--border-color);
             border-radius: 10px;
             overflow: hidden;
             margin-bottom: 30px;
+            transition: border-color 0.3s;
         }
 
+        iframe,
         embed {
             width: 100%;
             height: 100%;
@@ -89,17 +99,17 @@
 
         .back-button {
             padding: 12px 24px;
-            border: 1px solid #80d0ff;
+            border: 1px solid var(--accent-hover);
             border-radius: 30px;
-            color: #80d0ff;
+            color: var(--accent-hover);
             text-decoration: none;
             font-size: 1rem;
             transition: background-color 0.3s, color 0.3s;
         }
 
         .back-button:hover {
-            background-color: #80d0ff;
-            color: black;
+            background-color: var(--accent-hover);
+            color: var(--bg-color);
             cursor: pointer;
         }
     </style>
@@ -159,10 +169,21 @@
         
         <iframe src="https://drive.google.com/file/d/1VrwyK62gr2SlTm6UfX9oYgA4Tp6UfTb2/preview" width="100%" height="600" allow="autoplay"></iframe>
         <iframe src="https://drive.google.com/file/d/1OH_rb6Rw6a0sxRh6ByJz8QtOkyo1mRAV/preview" width="100%" height="600" allow="autoplay"></iframe>
+    </div>
 
     <div class="back-container">
         <a href="technical.html" class="back-button">← Back to Projects</a>
     </div>
+
+    <!-- Theme toggle switch -->
+    <div class="theme-toggle-wrapper">
+        <div class="theme-toggle" id="theme-toggle">
+            <div class="toggle-slider" id="toggle-slider">
+                <span id="theme-icon">🌙</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="theme.js"></script>
 </body>
 </html>
-

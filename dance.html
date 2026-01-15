@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dance Projects</title>
   <link rel="stylesheet" href="technical.css" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
 
   body {
-    background-color: black;
-    color: white;
     font-family: 'Courier New', monospace;
     padding: 20px;
+    /* Colors now come from theme.css */
   }
 
   .header {
@@ -26,12 +26,11 @@
 
   .section-title {
     font-size: 2rem;
-    color: #ffffff;
+    color: var(--text-color);
     margin: 60px auto 30px;
     text-align: center;
     font-weight: bold;
     letter-spacing: 1px;
-    /* removed the ::after underline effect */
   }
 
   .video-container {
@@ -45,9 +44,10 @@
   .video-box {
     width: 420px;
     max-width: 90%;
-    border: 2px solid #555;
+    border: 2px solid var(--border-color);
     border-radius: 12px;
     overflow: hidden;
+    transition: border-color 0.3s;
   }
 
   iframe, video {
@@ -59,7 +59,11 @@
     text-align: center;
     font-size: 0.9rem;
     margin-top: 5px;
-    color: #ccc;
+    color: #999;
+  }
+
+  [data-theme="light"] .caption {
+    color: #666;
   }
 
   .back-container {
@@ -68,22 +72,20 @@
   }
 
   .back-button {
-  padding: 12px 24px;
-  border: 1px solid #80d0ff;
-  border-radius: 30px;
-  color: #80d0ff;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s;
-}
+    padding: 12px 24px;
+    border: 1px solid var(--accent-hover);
+    border-radius: 30px;
+    color: var(--accent-hover);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
 
-.back-button:hover {
-  background-color: #80d0ff;
-  color: black;
-  cursor: pointer;
-}
-
-
+  .back-button:hover {
+    background-color: var(--accent-hover);
+    color: var(--bg-color);
+    cursor: pointer;
+  }
 
   </style>
 </head>
@@ -143,4 +145,15 @@
   <a href="creator.html" class="back-button">← Back to Projects</a>
 </div>
 
-  
+<!-- Theme toggle switch -->
+<div class="theme-toggle-wrapper">
+  <div class="theme-toggle" id="theme-toggle">
+    <div class="toggle-slider" id="toggle-slider">
+      <span id="theme-icon">🌙</span>
+    </div>
+  </div>
+</div>
+
+<script src="theme.js"></script>
+</body>
+</html>

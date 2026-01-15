@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ML & Data Projects</title>
   <link rel="stylesheet" href="technical.css" />
+  <link rel="stylesheet" href="theme.css" />
   <style>
     body {
-      background-color: black;
-      color: white;
       font-family: 'Courier New', monospace;
       padding: 20px;
+      /* Colors now come from theme.css */
     }
 
     .header {
@@ -27,13 +27,17 @@
       font-size: 1.1rem;
       max-width: 700px;
       margin: 0 auto 40px;
-      color: #ccc;
+      color: #999;
       line-height: 1.6;
+    }
+
+    [data-theme="light"] .header p {
+      color: #666;
     }
 
     .section-title {
       font-size: 2rem;
-      color: #ffffff;
+      color: var(--text-color);
       margin: 60px auto 20px;
       text-align: center;
       font-weight: bold;
@@ -42,11 +46,16 @@
 
     .description, .project-list {
       text-align: center;
-      color: #ccc;
+      color: #999;
       font-size: 1rem;
       line-height: 1.6;
       max-width: 800px;
       margin: 0 auto 20px;
+    }
+
+    [data-theme="light"] .description,
+    [data-theme="light"] .project-list {
+      color: #666;
     }
 
     .project-list ul {
@@ -59,18 +68,8 @@
       color: #90ee90;
     }
 
-    .github-link {
-      display: block;
-      text-align: center;
-      margin-top: 30px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #90ee90;
-      text-decoration: underline;
-    }
-
-    .github-link:hover {
-      color: white;
+    [data-theme="light"] .project-list li::before {
+      color: #2d8659;
     }
 
     .back-container {
@@ -78,41 +77,51 @@
       margin-top: 60px;
     }
 
-        .back-button {
-    padding: 12px 24px;
-    border: 1px solid #80d0ff;
-    border-radius: 30px;
-    color: #80d0ff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background-color 0.3s, color 0.3s;
+    .back-button {
+      padding: 12px 24px;
+      border: 1px solid var(--accent-hover);
+      border-radius: 30px;
+      color: var(--accent-hover);
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     .back-button:hover {
-    background-color: #80d0ff;
-    color: black;
-    cursor: pointer;
+      background-color: var(--accent-hover);
+      color: var(--bg-color);
+      cursor: pointer;
     }
 
     .github-link {
-    display: inline-block;
-    text-align: center;
-    margin-top: 30px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #90ee90;
-    text-decoration: none; /* Remove underline */
-    padding: 6px 14px;
-    border-radius: 12px;
-    border: 2px solid transparent;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #90ee90;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 12px;
+      border: 2px solid transparent;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      cursor: pointer;
     }
 
     .github-link:hover {
-    background-color: #90ee90;
-    color: black;
-    border-color: #90ee90;
+      background-color: #90ee90;
+      color: black;
+      border-color: #90ee90;
+    }
+
+    [data-theme="light"] .github-link {
+      color: #2d8659;
+    }
+
+    [data-theme="light"] .github-link:hover {
+      background-color: #2d8659;
+      color: white;
+      border-color: #2d8659;
     }
 
   </style>
@@ -150,5 +159,15 @@
     <a href="technical.html" class="back-button">← Back to Creative</a>
   </div>
 
+  <!-- Theme toggle switch -->
+  <div class="theme-toggle-wrapper">
+    <div class="theme-toggle" id="theme-toggle">
+      <div class="toggle-slider" id="toggle-slider">
+        <span id="theme-icon">🌙</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="theme.js"></script>
 </body>
 </html>

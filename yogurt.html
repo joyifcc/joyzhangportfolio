@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Customer Wait Time Optimization</title>
+  <link rel="stylesheet" href="theme.css" />
   <style>
     body {
-      background-color: black;
-      color: white;
       font-family: 'Courier New', monospace;
       margin: 0;
       padding: 20px;
+      /* Colors now come from theme.css */
     }
 
     h1 {
@@ -26,9 +26,10 @@
     .pdf-container {
       width: 100%;
       height: 600px;
-      border: 2px solid white;
+      border: 2px solid var(--border-color);
       border-radius: 10px;
       overflow: hidden;
+      transition: border-color 0.3s;
     }
 
     iframe {
@@ -41,43 +42,48 @@
       font-size: 1.1rem;
       margin-top: 15px;
       text-align: center;
-      color: #ccc;
+      color: #999;
+    }
+
+    [data-theme="light"] .description {
+      color: #666;
     }
 
     a.back {
       display: block;
       text-align: center;
       margin-top: 40px;
-      color: #4992d6;
+      color: var(--accent-color);
       text-decoration: underline;
       font-size: 1rem;
+      transition: color 0.3s;
     }
 
     a.back:hover {
-      color: white;
+      color: var(--text-color);
     }
 
     .back-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
-}
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+    }
 
-.back-button {
-  padding: 12px 24px;
-  border: 1px solid #80d0ff;
-  border-radius: 30px;
-  color: #80d0ff;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s;
-}
+    .back-button {
+      padding: 12px 24px;
+      border: 1px solid var(--accent-hover);
+      border-radius: 30px;
+      color: var(--accent-hover);
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
 
-.back-button:hover {
-  background-color: #80d0ff;
-  color: black;
-  cursor: pointer;
-}
+    .back-button:hover {
+      background-color: var(--accent-hover);
+      color: var(--bg-color);
+      cursor: pointer;
+    }
 
   </style>
 </head>
@@ -107,5 +113,16 @@
   <div class="back-container">
     <a href="technical.html" class="back-button">← Back to Projects</a>
   </div>
+
+  <!-- Theme toggle switch -->
+  <div class="theme-toggle-wrapper">
+    <div class="theme-toggle" id="theme-toggle">
+      <div class="toggle-slider" id="toggle-slider">
+        <span id="theme-icon">🌙</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="theme.js"></script>
 </body>
 </html>
