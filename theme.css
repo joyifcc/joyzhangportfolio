@@ -183,3 +183,56 @@ ul.top-nav li a:hover {
   border-bottom-color: var(--border-color) !important;
 }
 
+/* Page load fade-in animation */
+body {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Optional: Stagger animation for different elements */
+.header {
+  animation: fadeIn 0.8s ease-in 0.2s backwards;
+}
+
+.horizontal-scroll,
+.photo-grid,
+.video-container,
+.figma-container {
+  animation: fadeIn 1s ease-in 0.4s backwards;
+}
+
+/* Fade in from bottom effect for project cards */
+.scroll-item,
+.expandable {
+  animation: fadeInUp 0.8s ease-out backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger the project cards */
+.scroll-item:nth-child(1) { animation-delay: 0.1s; }
+.scroll-item:nth-child(2) { animation-delay: 0.2s; }
+.scroll-item:nth-child(3) { animation-delay: 0.3s; }
+.scroll-item:nth-child(4) { animation-delay: 0.4s; }
+.scroll-item:nth-child(5) { animation-delay: 0.5s; }
+.scroll-item:nth-child(6) { animation-delay: 0.6s; }
+.scroll-item:nth-child(7) { animation-delay: 0.7s; }
+.scroll-item:nth-child(8) { animation-delay: 0.8s; }
+.scroll-item:nth-child(9) { animation-delay: 0.9s; }

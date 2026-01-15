@@ -278,14 +278,16 @@ body {
   }
   
   .details {
-    opacity: 0;
-    padding: 0 15px;
-    font-size: 0.9rem;
-    color: var(--text-color);
-    transition: opacity 0.3s ease, max-height 0.3s ease;
-    overflow: hidden;
-    max-height: 0;
+  opacity: 0;
+  padding: 0 15px;
+  font-size: 0.9rem;
+  color: #ccc;
+  transition: opacity 0.3s ease, max-height 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
   }
+
+
   
   .expandable:hover .details {
     opacity: 1;
