@@ -156,11 +156,30 @@ ul.top-nav li a:hover {
   color: var(--text-color);
 }
 
-/* Details text for expandable project cards */
+
 .details {
-  color: #999 !important;
+  color: #ccc !important;
 }
 
 [data-theme="light"] .details {
+  color: #333 !important;
+}
+
+.caption {
+  color: #ccc !important;
+}
+
+[data-theme="light"] .caption {
   color: #666 !important;
 }
+
+
+.expandable {
+  background-color: var(--bg-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+.expandable img {
+  border-bottom-color: var(--border-color) !important;
+}
+
