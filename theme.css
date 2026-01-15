@@ -282,3 +282,102 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Skills Breakdown */
+.skills-breakdown {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: transparent !important;
+}
+
+.skill-card {
+  background-color: rgba(128, 128, 128, 0.05);
+  border: 2px solid var(--border-color);
+  border-radius: 15px;
+  padding: 30px 25px;
+  text-align: center;
+  min-width: 220px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.skill-card:nth-child(1) { animation-delay: 0.2s; }
+.skill-card:nth-child(2) { animation-delay: 0.3s; }
+.skill-card:nth-child(3) { animation-delay: 0.4s; }
+.skill-card:nth-child(4) { animation-delay: 0.5s; }
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(64, 123, 162, 0.2);
+  border-color: var(--accent-color);
+}
+
+[data-theme="light"] .skill-card {
+  background-color: rgba(128, 128, 128, 0.03);
+}
+
+[data-theme="light"] .skill-card:hover {
+  box-shadow: 0 8px 25px rgba(44, 95, 127, 0.2);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.skill-card:nth-child(2) .skill-icon { animation-delay: 0.5s; }
+.skill-card:nth-child(3) .skill-icon { animation-delay: 1s; }
+.skill-card:nth-child(4) .skill-icon { animation-delay: 1.5s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+  color: #999;
+  line-height: 1.5;
+}
+
+[data-theme="light"] .skill-card p {
+  color: #666;
+}
+
+
+@media (max-width: 768px) {
+  .skills-breakdown {
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  
+  .skill-card {
+    min-width: 150px;
+    padding: 25px 20px;
+  }
+  
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+  
+  .skill-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .skill-card p {
+    font-size: 0.85rem;
+  }
+}
