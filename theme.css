@@ -209,11 +209,31 @@ body {
   animation: fadeIn 1s ease-in 0.4s backwards;
 }
 
-/* Fade in from bottom effect for project cards */
-.scroll-item,
-.expandable {
+/* Fade in from bottom effect for project cards ONLY */
+.horizontal-scroll .scroll-item,
+.horizontal-scroll .expandable {
   animation: fadeInUp 0.8s ease-out backwards;
 }
+
+.horizontal-scroll .scroll-item:nth-child(1),
+.horizontal-scroll .expandable:nth-child(1) { animation-delay: 0.1s; }
+.horizontal-scroll .scroll-item:nth-child(2),
+.horizontal-scroll .expandable:nth-child(2) { animation-delay: 0.2s; }
+.horizontal-scroll .scroll-item:nth-child(3),
+.horizontal-scroll .expandable:nth-child(3) { animation-delay: 0.3s; }
+.horizontal-scroll .scroll-item:nth-child(4),
+.horizontal-scroll .expandable:nth-child(4) { animation-delay: 0.4s; }
+.horizontal-scroll .scroll-item:nth-child(5),
+.horizontal-scroll .expandable:nth-child(5) { animation-delay: 0.5s; }
+.horizontal-scroll .scroll-item:nth-child(6),
+.horizontal-scroll .expandable:nth-child(6) { animation-delay: 0.6s; }
+.horizontal-scroll .scroll-item:nth-child(7),
+.horizontal-scroll .expandable:nth-child(7) { animation-delay: 0.7s; }
+.horizontal-scroll .scroll-item:nth-child(8),
+.horizontal-scroll .expandable:nth-child(8) { animation-delay: 0.8s; }
+.horizontal-scroll .scroll-item:nth-child(9),
+.horizontal-scroll .expandable:nth-child(9) { animation-delay: 0.9s; }
+
 
 @keyframes fadeInUp {
   from {
@@ -225,18 +245,6 @@ body {
     transform: translateY(0);
   }
 }
-
-/* Stagger the project cards */
-.scroll-item:nth-child(1) { animation-delay: 0.1s; }
-.scroll-item:nth-child(2) { animation-delay: 0.2s; }
-.scroll-item:nth-child(3) { animation-delay: 0.3s; }
-.scroll-item:nth-child(4) { animation-delay: 0.4s; }
-.scroll-item:nth-child(5) { animation-delay: 0.5s; }
-.scroll-item:nth-child(6) { animation-delay: 0.6s; }
-.scroll-item:nth-child(7) { animation-delay: 0.7s; }
-.scroll-item:nth-child(8) { animation-delay: 0.8s; }
-.scroll-item:nth-child(9) { animation-delay: 0.9s; }
-
 
 .contact-section {
   text-align: center;
@@ -283,7 +291,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Skills Breakdown - Flip Cards */
+/* Skills Breakdown - Flip Cards - COMPLETE VERSION */
 .skills-breakdown {
   display: flex;
   justify-content: center;
@@ -293,15 +301,16 @@ html {
   max-width: 1200px;
   margin: 0 auto;
   background-color: transparent !important;
-  perspective: 1000px;
 }
 
 .skill-card {
-  background-color: transparent;
+  background-color: transparent !important;
   width: 220px;
   height: 280px;
   perspective: 1000px;
   animation: fadeInUp 0.8s ease-out backwards;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .skill-card:nth-child(1) { animation-delay: 0.2s; }
@@ -314,6 +323,7 @@ html {
   position: relative;
   width: 100%;
   height: 100%;
+  text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
@@ -327,6 +337,7 @@ html {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 15px;
   display: flex;
@@ -336,6 +347,7 @@ html {
   padding: 25px;
   text-align: center;
   border: 2px solid var(--border-color);
+  box-sizing: border-box;
 }
 
 .skill-card-front {
@@ -389,6 +401,11 @@ html {
   color: #666;
 }
 
+.skill-card-back h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
 .skill-card-back p {
   font-size: 0.85rem;
   line-height: 1.5;
@@ -405,6 +422,11 @@ html {
   .skill-card {
     width: 180px;
     height: 240px;
+  }
+  
+  .skill-card-front,
+  .skill-card-back {
+    padding: 20px;
   }
   
   .skill-icon {
