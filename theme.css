@@ -339,6 +339,8 @@ html {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -348,10 +350,13 @@ html {
   text-align: center;
   border: 2px solid var(--border-color);
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .skill-card-front {
   background-color: rgba(128, 128, 128, 0.05);
+  z-index: 2;
+  transform: rotateY(0deg);
 }
 
 [data-theme="light"] .skill-card-front {
@@ -362,6 +367,7 @@ html {
   background-color: var(--accent-color);
   color: white;
   transform: rotateY(180deg);
+  z-index: 1;
 }
 
 .skill-icon {
