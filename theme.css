@@ -291,6 +291,46 @@ html {
   scroll-behavior: smooth;
 }
 
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.contact-button {
+  padding: 8px 18px;
+  border: 2px solid var(--accent-color);
+  border-radius: 25px;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.contact-button:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(64, 123, 162, 0.3);
+}
+
+[data-theme="light"] .contact-button:hover {
+  box-shadow: 0 4px 12px rgba(44, 95, 127, 0.3);
+}
+
+.footer-text {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 25px;
+}
+
+[data-theme="light"] .footer-text {
+  color: #999;
+}
+
 /* Skills Breakdown - Flip Cards - COMPLETE VERSION */
 .skills-breakdown {
   display: flex;
