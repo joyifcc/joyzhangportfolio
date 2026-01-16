@@ -375,12 +375,12 @@ html {
 .skill-card-front,
 .skill-card-back {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -390,12 +390,10 @@ html {
   text-align: center;
   border: 2px solid var(--border-color);
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .skill-card-front {
   background-color: rgba(128, 128, 128, 0.05);
-  z-index: 2;
   transform: rotateY(0deg);
 }
 
@@ -407,7 +405,11 @@ html {
   background-color: var(--accent-color);
   color: white;
   transform: rotateY(180deg);
-  z-index: 1;
+}
+
+/* Hide back when not flipped */
+.skill-card-inner:not(:hover) .skill-card-back {
+  visibility: hidden;
 }
 
 .skill-icon {
