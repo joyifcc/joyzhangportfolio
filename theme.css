@@ -490,7 +490,7 @@ html {
   .skill-card-back p {
     font-size: 0.8rem;
   }
-}
+
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -551,4 +551,6 @@ html {
     bottom: 20px;
     right: 20px;
   }
+}
+
 }
