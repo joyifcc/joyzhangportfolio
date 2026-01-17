@@ -521,7 +521,33 @@ html {
     bottom: 20px;
     right: 20px;
   }
+    header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .head {
+    margin-top: 10px !important;
+    order: 2;
+  }
+  
+  ul.top-nav {
+    order: 1;
+    position: static !important;
+  }
+  
+  /* Hide logo icon on mobile (optional) */
+  .logo-icon {
+    display: none;
+  }
+  
+  /* Make joyxyz.dev smaller on mobile */
+  .head h2 {
+    font-size: 1.5rem !important;
+  }
 }
+
 
 /* Mobile responsive */
 @media (max-width: 768px) {
