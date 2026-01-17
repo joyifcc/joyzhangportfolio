@@ -491,3 +491,64 @@ html {
     font-size: 0.8rem;
   }
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+
+  .top-nav {
+    position: relative !important;
+    justify-content: center !important;
+    flex-wrap: wrap;
+    padding: 10px !important;
+    right: auto !important;
+    top: auto !important;
+  }
+  
+
+  .intro {
+    padding: 20px !important;
+    height: auto !important;
+    min-height: 60vh;
+  }
+  
+  .intro h1 span {
+    font-size: 40px !important;
+  }
+  
+  .intro h2 {
+    font-size: 1.3rem !important;
+  }
+
+  .about-section img {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .contact-section {
+    margin-top: 60px;
+  }
+  
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  .theme-toggle-wrapper {
+    bottom: 20px;
+    right: 20px;
+  }
+}

@@ -195,6 +195,69 @@
   </style>
 </head>
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Make text readable on mobile */
+  body {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Fix navigation */
+  .top-nav {
+    position: relative !important;
+    justify-content: center !important;
+    flex-wrap: wrap;
+    padding: 10px !important;
+    right: auto !important;
+    top: auto !important;
+  }
+  
+  /* Make intro section mobile-friendly */
+  .intro {
+    padding: 20px !important;
+    height: auto !important;
+    min-height: 60vh;
+  }
+  
+  .intro h1 span {
+    font-size: 40px !important;
+  }
+  
+  .intro h2 {
+    font-size: 1.3rem !important;
+  }
+  
+  /* Fix about section image */
+  .about-section img {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  
+  /* Better contact section on mobile */
+  .contact-section {
+    margin-top: 60px;
+  }
+  
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Theme toggle - keep visible but smaller */
+  .theme-toggle-wrapper {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
 <body>
   <div class="theme-toggle-wrapper">
     <div class="theme-toggle" id="theme-toggle">
