@@ -490,11 +490,11 @@ html {
   .skill-card-back p {
     font-size: 0.8rem;
   }
-
+}
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-
+  /* Make text readable on mobile */
   body {
     padding: 10px;
   }
@@ -507,7 +507,7 @@ html {
     font-size: 1.5rem !important;
   }
   
-
+  /* Fix navigation */
   .top-nav {
     position: relative !important;
     justify-content: center !important;
@@ -517,7 +517,7 @@ html {
     top: auto !important;
   }
   
-
+  /* Make intro section mobile-friendly */
   .intro {
     padding: 20px !important;
     height: auto !important;
@@ -531,12 +531,14 @@ html {
   .intro h2 {
     font-size: 1.3rem !important;
   }
-
+  
+  /* Fix about section image */
   .about-section img {
     width: 150px !important;
     height: 150px !important;
   }
-
+  
+  /* Better contact section on mobile */
   .contact-section {
     margin-top: 60px;
   }
@@ -546,11 +548,9 @@ html {
     align-items: center;
   }
   
-
+  /* Theme toggle - keep visible but smaller */
   .theme-toggle-wrapper {
     bottom: 20px;
     right: 20px;
   }
-}
-
 }
